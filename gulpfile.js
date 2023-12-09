@@ -29,9 +29,10 @@ function scss() {
 }
 
 function scripts() {
-  return gulp.src('app/js/main.js')
-    .pipe(concat('main.min.js'))
+  return gulp.src('app/js/*.js')
+    .pipe(concat('main.js'))
     .pipe(uglify())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('dist/js'))
     .pipe(browserSync.stream());
 }
@@ -70,7 +71,7 @@ function watching() {
   gulp.watch(['app/*.html'], gulp.parallel(html)).on('change', browserSync.reload);
   gulp.watch(['app/sass/*.scss'], gulp.parallel(scss))
   gulp.watch(['app/js/*.js'], gulp.parallel(scripts))
-  gulp.watch('app/img/*.+(jpg|jpeg|png|gif', gulp.parallel(images));
+  gulp.watch('app/img/*.+(jpg|jpeg|png|gif)', gulp.parallel(images));
 }
 
 exports.default = gulp.series(html, lib_css, lib_js, scss, scripts, images, watching);
