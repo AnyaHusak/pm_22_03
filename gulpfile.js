@@ -57,6 +57,11 @@ function lib_js() {
     .pipe(gulp.dest('dist/js'));
 }
 
+function json_data(){
+  return gulp.src('app/data/*.json')
+    .pipe(gulp.dest('dist/json'));
+}
+
 function browsersync() {
   browserSync.init({
       server: {
@@ -74,4 +79,4 @@ function watching() {
   gulp.watch('app/img/*.+(jpg|jpeg|png|gif)', gulp.parallel(images));
 }
 
-exports.default = gulp.series(html, lib_css, lib_js, scss, scripts, images, watching);
+exports.default = gulp.series(html, lib_css, lib_js, scss, scripts, images, json_data, watching);

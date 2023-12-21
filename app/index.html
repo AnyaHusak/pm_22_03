@@ -110,7 +110,7 @@
       <div class="d-flex justify-content-center container mt-4">
         
         <div class="card p-2 px-4 py-3">
-          
+          <!-- <img src="img/Shape1.png" class="shape1-img"> -->
             <div class="d-flex container justify-content-center align-items-center ">
                 VISA
             </div>
@@ -133,9 +133,21 @@
     </div>
     </div>
     <div class="col-8">
-      <h5>Statistics</h5>
+      <div class="d-flex justify-content-between statistics-data">
+        <h5>Statistics</h5>
+        <div class="d-flex align-items-center selectBox m-2 p-2">
+          <select id="yearSelect">
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+          </select>
+          <select id="timePeriodSelect">
+            <option value="months">Month</option>
+            <option value="quarter">Quarter</option>
+          </select>
+        </div>
+      </div>
       <div>
-        <canvas id="linechart" ></canvas>
+        <canvas id="linechart"></canvas>
       </div>
     </div>
   </div>
@@ -221,11 +233,12 @@
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/main.min.js"></script>
-  <!-- <script src="js/line.min.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.44.0/apexcharts.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.44.0/apexcharts.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 </body>
 </html>

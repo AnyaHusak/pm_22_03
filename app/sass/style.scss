@@ -175,6 +175,10 @@
                 font-family: "Poppins";
             }
         }
+        .container::before{
+          content: "";
+          position: absolute;
+        }
         h5{
             padding: 15px;
             margin: 0;
@@ -199,7 +203,7 @@
             }
         }
 
-
+        
         .second-details{
             h3{
                 margin: 0;
@@ -218,10 +222,7 @@
             }
             
         }
-        // .load{
-        //   width: 100%;
-        //   max-width: 340px;
-        // }
+        
         .load-bar{
           width: 340px;
           height: 4px;
@@ -383,57 +384,8 @@
           .days li:not(.active):hover::before{
             background: #f2f2f2;
           }
-        // .circular-progress{
-        //     position: relative;
-        //     width: 180px;
-        //     height: 180px;
-        //     background: conic-gradient(#58deb6 60deg, #62a7ff 40deg, #ededed 0deg);
-        //     border-radius: 50%;
-
-        // }
-        // .circular-progress::before{
-        //     content: "";
-        //     position: absolute;
-        //     height: 150px;
-        //     width: 150px;
-        //     border-radius: 50%;
-        //     background-color: #ffffff;
-        // }
-        // .progress-value{
-        //     position: relative;
-        //     font-size: 25px;
-        //     letter-spacing: 2px;
-        //     line-height: 40px;
-        //     color: #404447;
-        //     font-weight: 600;
-        // }
 
     }
-    //     .row{
-    //         display: flex;
-    //         .col-5{
-    //             margin: 20px;
-    //             width: 360px;
-    //             height: 320px;
-    //             border-radius: 3px;
-    //         filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    //             background-color: #ffffff;
-    //         }
-    //         .row{
-    //             display: flex;
-    //             margin: 0;
-    //             flex-wrap: wrap;
-    //             .col-5{
-    //                 padding: 0;
-    //                 width:355px;
-    //                 height: 140px;
-    //                 border-radius: 3px;
-    //                 filter: drop-shadow(0 0 60px rgba(31,32,41,0.1));
-    //                 background-color: #ffffff;
-    //             }
-    //         }
-    //     }
-    // }
 
 }
 
